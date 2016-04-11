@@ -47,3 +47,14 @@ Usage is really simple and has been thought so that it resembles how most dumper
 
     #dump & restore in one command using pipes
     etcdumper dump https://etcd.example.com:4001 | etcdumper restore http://localhost:4001
+
+
+Docker
+------
+You can use etcdumper with ``docker run`` command. It is same syntax, just replace ``etcdumper`` with 
+``docker run zetaops/etcdumper``. Or simply define an alias: ``alias etcdumper='docker run zetaops/etcdumper'``
+
+.. code:: bash
+
+    # dump to stdout
+    docker run zetaops/etcdumper dump https://etcd.example.com:4001
